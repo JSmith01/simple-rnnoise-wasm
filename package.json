@@ -1,6 +1,6 @@
 {
   "name": "simple-rnnoise-wasm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tiny Web Audio RNNoise wrapper compiled to WebAssembly with an AudioWorklet node.",
   "type": "module",
   "module": "dist/rnnoise.mjs",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourname/simple-rnnoise-wasm.git"
+    "url": "git+https://github.com/JSmith01/simple-rnnoise-wasm.git"
   },
   "keywords": [
     "rnnoise",
@@ -41,9 +41,9 @@
   "author": "WONG Tin Chi Timothy; Dmitry Zlygin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yourname/simple-rnnoise-wasm/issues"
+    "url": "https://github.com/JSmith01/simple-rnnoise-wasm/issues"
   },
-  "homepage": "https://github.com/yourname/simple-rnnoise-wasm#readme",
+  "homepage": "https://github.com/JSmith01/simple-rnnoise-wasm#readme",
   "devDependencies": {
     "@rspack/cli": "^1.0.0",
     "@rspack/core": "^1.0.0",
