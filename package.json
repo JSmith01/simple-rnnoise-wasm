@@ -1,0 +1,19 @@
+{
+  "name": "simple-rnnoise-wasm",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "http-server -o /demo/",
+    "build": "rspack build",
+    "build-runtime": "rspack build --config-name runtime",
+    "build-worklet": "rspack build --config-name worklet",
+    "build:wasm": "bash ./build.sh",
+    "build:wasm:docker": "bash ./build-docker.sh"
+  },
+  "devDependencies": {
+    "@rspack/cli": "^1.0.0",
+    "@rspack/core": "^1.0.0",
+    "http-server": "^14.1.1"
+  }
+}
