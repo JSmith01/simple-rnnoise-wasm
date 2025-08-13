@@ -1,16 +1,49 @@
 {
   "name": "simple-rnnoise-wasm",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Tiny Web Audio RNNoise wrapper compiled to WebAssembly with an AudioWorklet node.",
   "type": "module",
+  "module": "dist/rnnoise.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/rnnoise.mjs"
+    },
+    "./rnnoise.wasm": "./dist/rnnoise.wasm",
+    "./rnnoise.worklet.js": "./dist/rnnoise.worklet.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
   "scripts": {
     "start": "http-server -o /demo/",
     "build": "rspack build",
     "build-runtime": "rspack build --config-name runtime",
     "build-worklet": "rspack build --config-name worklet",
     "build:wasm": "bash ./build.sh",
-    "build:wasm:docker": "bash ./build-docker.sh"
+    "build:wasm:docker": "bash ./build-docker.sh",
+    "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourname/simple-rnnoise-wasm.git"
+  },
+  "keywords": [
+    "rnnoise",
+    "webaudio",
+    "audio",
+    "wasm",
+    "vad",
+    "denoise"
+  ],
+  "author": "WONG Tin Chi Timothy; Dmitry Zlygin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourname/simple-rnnoise-wasm/issues"
+  },
+  "homepage": "https://github.com/yourname/simple-rnnoise-wasm#readme",
   "devDependencies": {
     "@rspack/cli": "^1.0.0",
     "@rspack/core": "^1.0.0",

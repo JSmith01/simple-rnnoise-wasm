@@ -17,7 +17,7 @@ helper `rnnoise_loadAssets(options: { scriptSrc?: string | URL, moduleSrc?: stri
 ## Usage
 
 ```js
-import { RNNoiseNode } from 'rnnoise-wasm'; // or just import it in HTML: <script src="rnnoise-wasm.js"></script>
+import { RNNoiseNode } from 'simple-rnnoise-wasm';
 
 const ctx = new AudioContext();
 ctx.resume();
