@@ -84,9 +84,11 @@ class RNNoiseNode extends AudioWorkletNode {
     /**
      * Update the VAD probability, if keepalive is false, the processor will be terminated
      *
-     * @param {boolean} [keepalive]
+     * @param {boolean|'stat'} [keepalive]
      */
-    update(keepalive= true) { this.port.postMessage(keepalive); }
+    update(keepalive = true) {
+        this.port.postMessage(keepalive);
+    }
 }
 
 export { RNNoiseNode, rnnoise_loadAssets };

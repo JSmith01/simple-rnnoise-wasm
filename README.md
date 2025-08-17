@@ -7,6 +7,7 @@ To test locally, run `npm start`, then a browser should automatically open `http
 
 The RNNoiseNode class is a custom WebAudioNode with additional `update(keepalive = true)` method,
 that emits the recent VAD status in a `status` event `data` property. It could use `onstatus` callback instead.
+It is also possible to get execution stats if calling `rnnoiseNode.update('stat')`. Please check the demo for more details.
 
 RNNoiseNode has a static `register(audioContext)` method that registers the node to the given AudioContext and preloads
 the wasm module and the audio worklet. The method has an optional `assetData` argument to provide a custom source
